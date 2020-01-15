@@ -14,7 +14,7 @@ import ShortcutFr from "./fr";
 export default {
   name: "HomeShortcut",
   props: {
-    list: Array
+    list: Array | Object
   },
   components: {
     ShortcutFl,
@@ -41,26 +41,33 @@ export default {
 <style scoped lang='stylus'>
 @import '~styles/varibles.styl';
 
-#shortcut >>> .other_items {
-  &:hover {
-    color: $bgColor;
-  }
+#shortcut >>> .other_items:hover{
+  color: $bgColor;
 }
 
 #shortcut >>>  li.spacer {
   overflow: hidden;
-  margin: 0.22rem 0.08rem 0;
-  width: 0.02rem;
-  height: 0.2rem;
+  margin: .22rem .08rem 0;
+  width: .02rem;
+  height: .2rem;
   background-color: #ccc;
   padding: 0;
+}
+
+#shortcut >>> .areamini, >>>.myjd, >>> .purchase{
+  position: absolute;
+  border-left: .02rem solid #ccc;
+  border-right: .02rem solid #ccc;
+  background-color: $white;
+  -webkit-box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);
+  box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);
 }
 
 #shortcut {
   width: 100%;
   height: $height;
   line-height: $height;
-  border-bottom: 0.03rem solid #ddd;
+  border-bottom: .03rem solid #ddd;
   background: $borderColor;
 
   .content {

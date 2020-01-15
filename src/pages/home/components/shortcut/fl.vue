@@ -64,7 +64,7 @@
 export default {
   name: "Fl",
   props: {
-    list: Array
+    list: Array | Object
   },
   data() {
     return {
@@ -96,7 +96,7 @@ export default {
 
     .location {
       width: 1.1rem;
-      height: 0.62rem;
+      height: .62rem;
       display: flex;
       justify-content: center;
       cursor: pointer;
@@ -109,32 +109,26 @@ export default {
     .areamini {
       width: 6.44rem;
       height: 9rem;
-      position: absolute;
-      border-left: 0.02rem solid #ccc;
-      border-right: 0.02rem solid #ccc;
-      background-color: $white;
-      -webkit-box-shadow: 0.02rem 0.04rem 0.02rem rgba(0, 0, 0, 0.1);
-      box-shadow: 0.02rem 0.04rem 0.02rem rgba(0, 0, 0, 0.1);
 
       .items {
         width: 6.1rem;
         height: 4.7rem;
-        margin: 0.17rem;
+        margin: .17rem;
 
         .item {
           float: left;
           width: 1.2rem;
-          padding: 0.04rem 0;
+          padding: .04rem 0;
           text-align: center;
 
           .to_city {
             color: #999;
-            padding: 0.13rem 0.2rem;
+            padding: .13rem .2rem;
           }
 
           .city_cur {
             color: $white;
-            padding: 0.13rem 0.2rem;
+            padding: .13rem .2rem;
             background-color: $bgColor;
           }
 
@@ -146,16 +140,16 @@ export default {
       }
 
       .areamini_inter {
-        margin: 0.2rem 0 0.2rem 0.2rem;
+        margin: .2rem 0 .2rem .2rem;
 
         .areamini_inter_split {
           width: 5.24rem;
           height: 0;
-          border-bottom: 0.02rem dotted rgb(238, 238, 238);
+          border-bottom: .02rem dotted rgb(238, 238, 238);
         }
 
         .other_item {
-          margin: 0.04rem 0 0 0.2rem;
+          margin: .04rem 0 0 .2rem;
           float: left;
           width: 2.68rem;
         }

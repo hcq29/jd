@@ -213,6 +213,92 @@
                 "id": "jd2-9",
                 "name": "我的理财"
             }
-        ]
+        ],
+        "purchase": [
+            {
+                "id": "qyg",
+                "name": "企业购"
+            },
+            {
+                "id": "sycjg",
+                "name": "商用场景馆"
+            },
+            {
+                "id": "gyp",
+                "name": "工业品"
+            },
+            {
+                "id": "lpk",
+                "name": "礼品卡"
+            }
+        ],
+        "kufw": {
+            "kh": {
+                "title": "客户",
+                "detail": [
+                    {
+                        "id": "help",
+                        "name": "帮助中心"
+                    },
+                    {
+                        "id": "help",
+                        "name": "售后服务"
+                    },
+                    {
+                        "id": "help",
+                        "name": "在线客服"
+                    },
+                    {
+                        "id": "help",
+                        "name": "意见建议"
+                    },
+                    {
+                        "id": "help",
+                        "name": "电话客服"
+                    },
+                    {
+                        "id": "help",
+                        "name": "客服邮箱"
+                    },
+                    {
+                        "id": "help",
+                        "name": "金融咨询"
+                    },
+                    {
+                        "id": "help",
+                        "name": "全球售客服"
+                    }
+                ]
+            },
+            "sh": {
+                "title": "商户",
+                "detail": [
+                    {
+                        "id": "help",
+                        "name": "合作招商"
+                    },
+                    {
+                        "id": "help",
+                        "name": "成长中心"
+                    },
+                    {
+                        "id": "help",
+                        "name": "商家后台"
+                    },
+                    {
+                        "id": "help",
+                        "name": "京麦工作台"
+                    },
+                    {
+                        "id": "help",
+                        "name": "商家帮助"
+                    },
+                    {
+                        "id": "help",
+                        "name": "规则平台"
+                    }
+                ]
+            }
+        }
     }
 }
