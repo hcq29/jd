@@ -1,13 +1,13 @@
 <template>
   <div id="home">
     <home-shortcut :list="shortcutList"></home-shortcut>
-    <home-banner></home-banner>
+    <home-header></home-header>
     <home-banner></home-banner>
   </div>
 </template>
 
 <script>
-import HomeShortcut from "./components/Shortcut";
+import HomeShortcut from "./components/shortcut/Shortcut";
 import HomeHeader from './components/Header';
 import HomeBanner from './components/Banner';
 import axios from "axios";
@@ -40,7 +40,7 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        this.shortcutList = data.cities
+        this.shortcutList = data
         console.log(this.shortcutList)
       }
     }

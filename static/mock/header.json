@@ -3,144 +3,215 @@
     "data": {
         "cities": [
             {
-                "id": 0,
+                "id": "citie-0",
                 "name": "北京"
             },
             {
-                "id": 1,
+                "id": "citie-1",
                 "name": "上海"
             },
             {
-                "id": 2,
+                "id": "citie-2",
                 "name": "天津"
             },
             {
-                "id": 3,
+                "id": "citie-3",
                 "name": "重庆"
             },
             {
-                "id": 4,
+                "id": "citie-4",
                 "name": "河北"
             },
             {
-                "id": 5,
+                "id": "citie-5",
                 "name": "山西"
             },
             {
-                "id": 6,
+                "id": "citie-6",
                 "name": "河南"
             },
             {
-                "id": 7,
+                "id": "citie-7",
                 "name": "辽宁"
             },
             {
-                "id": 8,
+                "id": "citie-8",
                 "name": "吉林"
             },
             {
-                "id": 9,
+                "id": "citie-9",
                 "name": "黑龙江"
             },
             {
-                "id": 10,
+                "id": "citie-10",
                 "name": "内蒙古"
             },
             {
-                "id": 11,
+                "id": "citie-11",
                 "name": "江苏"
             },
             {
-                "id": 12,
+                "id": "citie-12",
                 "name": "山东"
             },
             {
-                "id": 13,
+                "id": "citie-13",
                 "name": "安徽"
             },
             {
-                "id": 14,
+                "id": "citie-14",
                 "name": "浙江"
             },
             {
-                "id": 15,
+                "id": "citie-15",
                 "name": "福建"
             },
             {
-                "id": 16,
+                "id": "citie-16",
                 "name": "湖北"
             },
             {
-                "id": 17,
+                "id": "citie-17",
                 "name": "湖南"
             },
             {
-                "id": 18,
+                "id": "citie-18",
                 "name": "广东"
             },
             {
-                "id": 19,
+                "id": "citie-19",
                 "name": "广西"
             },
             {
-                "id": 20,
+                "id": "citie-20",
                 "name": "江西"
             },
             {
-                "id": 21,
+                "id": "citie-21",
                 "name": "四川"
             },
             {
-                "id": 22,
+                "id": "citie-22",
                 "name": "海南"
             },
             {
-                "id": 23,
+                "id": "citie-23",
                 "name": "贵州"
             },
             {
-                "id": 24,
+                "id": "citie-24",
                 "name": "云南"
             },
             {
-                "id": 25,
+                "id": "citie-25",
                 "name": "西藏"
             },
             {
-                "id": 26,
+                "id": "citie-26",
                 "name": "陕西"
             },
             {
-                "id": 27,
+                "id": "citie-27",
                 "name": "甘肃"
             },
             {
-                "id": 28,
+                "id": "citie-28",
                 "name": "青海"
             },
             {
-                "id": 29,
+                "id": "citie-29",
                 "name": "宁夏"
             },
             {
-                "id": 30,
+                "id": "citie-30",
                 "name": "新疆"
             },
             {
-                "id": 31,
+                "id": "citie-31",
                 "name": "港澳"
             },
             {
-                "id": 32,
+                "id": "citie-32",
                 "name": "台湾"
             },
             {
-                "id": 33,
+                "id": "citie-33",
                 "name": "钓鱼岛"
             },
             {
-                "id": 34,
+                "id": "citie-34",
                 "name": "海外"
+            }
+        ],
+        "others": [
+            {
+                "id": "GS",
+                "name": "Global Site",
+                "icon": "global"
+            },
+            {
+                "id": "CP",
+                "name": "Сайт России",
+                "icon": "eluosi"
+            },
+            {
+                "id": "SI",
+                "name": "Situs Indonesia",
+                "icon": "yinni"
+            },
+            {
+                "id": "SdE",
+                "name": "Sitio de España",
+                "icon": "Spain"
+            },
+            {
+                "id": "TG",
+                "name": "เว็บไซต์ประเทศไทย",
+                "icon": "taiguo"
+            }
+        ],
+        "myjd1": [
+            {
+                "id": "jd1-0",
+                "name": "待处理订单"
+            },
+            {
+                "id": "jd1-1",
+                "name": "消息"
+            },
+            {
+                "id": "jd1-2",
+                "name": "返修退换货"
+            },
+            {
+                "id": "jd1-3",
+                "name": "我的问答"
+            },
+            {
+                "id": "jd1-4",
+                "name": "降价商品"
+            },
+            {
+                "id": "jd1-5",
+                "name": "我的关注"
+            }
+        ],
+        "myjd2": [
+            {
+                "id": "jd2-6",
+                "name": "我的京豆"
+            },
+            {
+                "id": "jd2-7",
+                "name": "我的优惠券"
+            },
+            {
+                "id": "jd2-8",
+                "name": "我的白条"
+            },
+            {
+                "id": "jd2-9",
+                "name": "我的理财"
             }
         ]
     }

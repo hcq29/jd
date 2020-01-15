@@ -18,5 +18,5 @@ export default {
     height 9rem
     background-color #453
     position relative
-    z-index 22
+    z-index 1
 </style>
