@@ -54,7 +54,7 @@ export default {
   padding: 0;
 }
 
-#shortcut >>> .areamini, >>>.myjd, >>> .purchase{
+#shortcut >>> .areamini, >>>.myjd, >>> .purchase, >>> .cService, >>> .navigation{
   position: absolute;
   border-left: .02rem solid #ccc;
   border-right: .02rem solid #ccc;

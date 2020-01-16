@@ -1,6 +1,6 @@
 <template>
   <ul class="fl">
-    <li @mouseenter="enter" @mouseleave="leave" class="shortcut_btn">
+    <li @mouseenter="show = !show" @mouseleave="show = !show" class="shortcut_btn">
       <router-link tag="div" href="javascript:void(0);" class="location" :to="'/'">
         <i class="iconfont icon-location"></i>
         <span>{{current_city}}</span>
@@ -73,12 +73,6 @@ export default {
     };
   },
   methods: {
-    enter() {
-      this.show = true;
-    },
-    leave() {
-      this.show = false;
-    }
   },
   mounted() {}
 };
@@ -92,7 +86,7 @@ export default {
 
   .shortcut_btn {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     .location {
       width: 1.1rem;
