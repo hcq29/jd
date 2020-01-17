@@ -54,10 +54,11 @@ export default {
   padding: 0;
 }
 
-#shortcut >>> .areamini, >>>.myjd, >>> .purchase, >>> .cService, >>> .navigation{
+#shortcut >>> .areamini, >>>.myjd, >>> .purchase, >>> .cService, >>> .navigation, >>> .mobile_pop{
   position: absolute;
   border-left: .02rem solid #ccc;
   border-right: .02rem solid #ccc;
+  top: 0.62rem;
   background-color: $white;
   -webkit-box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);
   box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);

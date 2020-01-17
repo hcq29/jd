@@ -17,9 +17,13 @@
       <a href="#">我的京东</a>
       <i class="iconfont icon-down"></i>
       <div v-show="myjd_view" class="myjd">
-        <div v-for="myjd1 in list.myjd1" :key="myjd1.id" class="myjd_itmes">{{myjd1.name}}</div>
+        <div v-for="myjd1 in list.myjd1" :key="myjd1.id" class="myjd_itmes">
+          <a href="#" class="default">{{myjd1.name}}</a>
+        </div>
         <div class="myjd_split"></div>
-        <div v-for="myjd2 in list.myjd2" :key="myjd2.id" class="myjd_itmes">{{myjd2.name}}</div>
+        <div v-for="myjd2 in list.myjd2" :key="myjd2.id" class="myjd_itmes">
+          <a href="#" class="default">{{myjd2.name}}</a>
+        </div>
       </div>
     </li>
     <li class="spacer"></li>
@@ -31,11 +35,9 @@
       <a href="#" style="color: #E1251B">企业采购</a>
       <i class="iconfont icon-down"></i>
       <div v-show="purchase" class="purchase">
-        <div
-          class="purchase_item"
-          v-for="purchase in list.purchase"
-          :key="purchase.id"
-        >{{purchase.name}}</div>
+        <div v-for="purchase in list.purchase" :key="purchase.id">
+          <a href="#" class="default">{{purchase.name}}</a>
+        </div>
       </div>
     </li>
     <li class="spacer"></li>
@@ -45,11 +47,9 @@
       <div v-show="cService" class="cService">
         <div v-for="cService in list.cService" class="cService_item" :key="cService.title">
           <div class="cService_title">{{cService.title}}</div>
-          <div
-            v-for="customer in cService.detail"
-            :key="customer.id"
-            class="customer"
-          >{{customer.name}}</div>
+          <div v-for="customer in cService.detail" :key="customer.id" class="customer">
+            <a href="#" class="default">{{customer.name}}</a>
+          </div>
         </div>
       </div>
     </li>
@@ -64,17 +64,69 @@
       <div v-show="navigation" class="navigation">
         <dl v-for="navigation in list.navigation" :key="navigation.title">
           <dt class="navigation_title">{{navigation.title}}</dt>
-          <dd
-            v-for="navigation_item in navigation.detail"
-            :key="navigation_item.id"
-            class="navigation_item"
-          >{{navigation_item.name}}</dd>
+          <dd v-for="navigation_item in navigation.detail" :key="navigation_item.id">
+            <a href="#" class="default">{{navigation_item.name}}</a>
+          </dd>
         </dl>
       </div>
     </li>
     <li class="spacer"></li>
     <li>
       <a href="#" class="default">手机京东</a>
+      <div id="J_mobile_pop" class="mobile_pop">
+        <div class="mobile_pop_item">
+          <div class="mobile_pop_qrcode">
+            <img src="../../../../assets/images/ew1.jpg" />
+          </div>
+          <div class="mobile_pop_info">
+            <h5 class="mobile_pop_tit">
+              <a href="#">手机京东</a>
+            </h5>
+            <p class="mobile_pop_value">新人专享大礼包</p>
+            <div class="mobile_pop_device">
+              <a class="mobile_pop_device_ios" href="#">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-iphone" />
+                </svg>
+              </a>
+              <a class="mobile_pop_device_and" href="#">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-android" />
+                </svg>
+              </a>
+              <a class="mobile_pop_device_pad" href="#">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-phone" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile_pop_item">
+          <div class="mobile_pop_qrcode">
+            <img src="../../../../assets/images/ew2.jpg" />
+          </div>
+          <div class="mobile_pop_info">
+            <h5 class="mobile_pop_tit">关注京东微信</h5>
+            <p class="mobile_pop_value">微信扫一扫关注京东服务号订阅更多促销优惠福利</p>
+          </div>
+        </div>
+        <div class="mobile_pop_item">
+          <div class="mobile_pop_qrcode">
+            <img src="../../../../assets/images/ew3.jpg" />
+          </div>
+          <div class="mobile_pop_info">
+            <h5 class="mobile_pop_tit">
+              <a href="#">京东金融客户端</a>
+            </h5>
+            <p class="mobile_pop_value">新人专享大礼包</p>
+            <div class="mobile_pop_device">
+              <a class="mobile_pop_device_ios" href="#">APP Store</a>
+              <a class="mobile_pop_device_and" href="#">安卓市场</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
   </ul>
 </template>
@@ -120,7 +172,6 @@ export default {
       width: 4.8rem;
       z-index: 3;
       padding: 0.25rem;
-      top: 0.62rem;
       text-align: left;
 
       .myjd_itmes {
@@ -145,7 +196,6 @@ export default {
       width: 2.5rem;
       z-index: 3;
       padding: 0.25rem;
-      top: 0.62rem;
       text-align: left;
 
       div {
@@ -161,11 +211,14 @@ export default {
       top: 0.62rem;
       text-align: left;
       margin-left: -2.02rem;
-      .cService_item{
+
+      .cService_item {
         border-bottom: 1px dotted #eee;
         padding-bottom: 6px;
+
         .cService_title {
           font-weight: 800;
+          color: #777;
         }
 
         .customer {
@@ -173,38 +226,94 @@ export default {
           margin-right: 0.4rem;
         }
       }
-      
     }
+
     .navigation {
       z-index: 3;
-      top: 0.62rem;
       text-align: left;
       margin-left: -16.45rem;
-      padding-bottom: .3rem;
+      padding-bottom: 0.3rem;
       width: 19.5rem;
-      dl{
+      color: #777;
+
+      dl {
         width: 4rem;
         float: left;
-        border-left: .02rem solid #eee;
-        margin-top: .3rem;
+        border-left: 0.02rem solid #eee;
+        margin-top: 0.3rem;
         padding: 0 0rem 0 0.4rem;
-        dt{
+
+        dt {
           font-weight: 800;
         }
-        dd{
+
+        dd {
           display: inline-block;
           width: 1.8rem;
         }
       }
-      
-      :nth-child(1){
+
+      :nth-child(1) {
         width: 5.4rem;
         border: none;
       }
     }
+
+    .mobile_pop {
+      z-index: 3;
+      margin-left: -2rem;
+      width: 3.8rem;
+
+      .mobile_pop_item {
+        padding: 15px 0;
+        border-bottom: 1px solid #e7e7e7;
+
+        .mobile_pop_qrcode {
+          position: absolute;
+          left: 5px;
+          width: 1.48rem;
+          height: 1.48rem;
+          padding: 0.02rem;
+          border: 1px solid #ccc;
+          background-color: #f7f7f7;
+
+          img {
+            width: 1.48rem;
+            height: 1.48rem;
+          }
+        }
+
+        .mobile_pop_info {
+          margin: 0 6px 0 90px;
+          min-height: 70px;
+          line-height: 0.38rem;
+
+          .mobile_pop_device {
+            display: flex;
+            justify-content: space-between;
+            width: 67px;
+          }
+        }
+      }
+    }
+
+    .mobile_pop:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -9px;
+      left: 60%;
+      margin-left: -5px;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: 5px solid transparent;
+      border-bottom-color: #fff;
+    }
   }
 
-  .default, .purchase_item, .customer, dd {
+  .default {
     &:hover {
       color: $bgColor;
       cursor: pointer;
