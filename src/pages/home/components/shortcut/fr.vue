@@ -71,9 +71,10 @@
       </div>
     </li>
     <li class="spacer"></li>
-    <li>
+    <li @mouseenter="jdPhone = !jdPhone"
+      @mouseleave="jdPhone = !jdPhone">
       <a href="#" class="default">手机京东</a>
-      <div id="J_mobile_pop" class="mobile_pop">
+      <div v-show="jdPhone" id="J_mobile_pop" class="mobile_pop">
         <div class="mobile_pop_item">
           <div class="mobile_pop_qrcode">
             <img src="../../../../assets/images/ew1.jpg" />
@@ -100,6 +101,7 @@
                 </svg>
               </a>
             </div>
+            <div style="font-size: 8px;">android  iphone    phone</div>
           </div>
         </div>
         <div class="mobile_pop_item">
@@ -121,9 +123,18 @@
             </h5>
             <p class="mobile_pop_value">新人专享大礼包</p>
             <div class="mobile_pop_device">
-              <a class="mobile_pop_device_ios" href="#">APP Store</a>
-              <a class="mobile_pop_device_and" href="#">安卓市场</a>
+              <a class="mobile_pop_device_ios" href="#">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-iphone" />
+                </svg>
+              </a>
+              <a class="mobile_pop_device_and" href="#">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-android" />
+                </svg>
+              </a>
             </div>
+            <div style="font-size: 8px;"> &nbsp; &nbsp;android &nbsp; &nbsp; iphone</div>
           </div>
         </div>
       </div>
@@ -143,6 +154,7 @@ export default {
       purchase: false,
       cService: false,
       navigation: false,
+      jdPhone: false,
       current_city: "广东"
     };
   },
@@ -290,8 +302,15 @@ export default {
 
           .mobile_pop_device {
             display: flex;
-            justify-content: space-between;
-            width: 67px;
+            justify-content: space-around;
+            width: 77px;
+          }
+          .mobile_pop_tit{
+            font-weight: 800;
+            color: #777;
+          }
+          .mobile_pop_value{
+            color: $bgColor;
           }
         }
       }

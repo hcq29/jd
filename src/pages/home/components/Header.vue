@@ -54,7 +54,6 @@ export default {
     .search {
       width: 16rem;
       height: 2.8rem;
-      background-color: #546;
       position: absolute;
       right: 0;
       .top_input{

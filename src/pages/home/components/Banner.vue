@@ -16,7 +16,6 @@ export default {
 #banner
     min-width 21.2rem;
     height 9rem
-    background-color #453
     position relative
     z-index 1
 </style>
