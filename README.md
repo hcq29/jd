@@ -2,7 +2,7 @@
 
 > 这是一个使用vue.js 编写的京东首页项目，使用了stylus辅助开发css样式，具体完成情况如下：
 >
-> 具体效果： https://github.com/hcq29/jd/dist/   （持续更新中）
+> 具体效果： https://hcq29.github.io/jd/dist/   （持续更新中）
 
 ![01-位置选择](images/01-%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9.jpg)
 
