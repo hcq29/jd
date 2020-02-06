@@ -1,0 +1,562 @@
+{
+    "ret": true,
+    "data": {
+        "cities": [
+            {
+                "id": "citie-0",
+                "name": "北京"
+            },
+            {
+                "id": "citie-1",
+                "name": "上海"
+            },
+            {
+                "id": "citie-2",
+                "name": "天津"
+            },
+            {
+                "id": "citie-3",
+                "name": "重庆"
+            },
+            {
+                "id": "citie-4",
+                "name": "河北"
+            },
+            {
+                "id": "citie-5",
+                "name": "山西"
+            },
+            {
+                "id": "citie-6",
+                "name": "河南"
+            },
+            {
+                "id": "citie-7",
+                "name": "辽宁"
+            },
+            {
+                "id": "citie-8",
+                "name": "吉林"
+            },
+            {
+                "id": "citie-9",
+                "name": "黑龙江"
+            },
+            {
+                "id": "citie-10",
+                "name": "内蒙古"
+            },
+            {
+                "id": "citie-11",
+                "name": "江苏"
+            },
+            {
+                "id": "citie-12",
+                "name": "山东"
+            },
+            {
+                "id": "citie-13",
+                "name": "安徽"
+            },
+            {
+                "id": "citie-14",
+                "name": "浙江"
+            },
+            {
+                "id": "citie-15",
+                "name": "福建"
+            },
+            {
+                "id": "citie-16",
+                "name": "湖北"
+            },
+            {
+                "id": "citie-17",
+                "name": "湖南"
+            },
+            {
+                "id": "citie-18",
+                "name": "广东"
+            },
+            {
+                "id": "citie-19",
+                "name": "广西"
+            },
+            {
+                "id": "citie-20",
+                "name": "江西"
+            },
+            {
+                "id": "citie-21",
+                "name": "四川"
+            },
+            {
+                "id": "citie-22",
+                "name": "海南"
+            },
+            {
+                "id": "citie-23",
+                "name": "贵州"
+            },
+            {
+                "id": "citie-24",
+                "name": "云南"
+            },
+            {
+                "id": "citie-25",
+                "name": "西藏"
+            },
+            {
+                "id": "citie-26",
+                "name": "陕西"
+            },
+            {
+                "id": "citie-27",
+                "name": "甘肃"
+            },
+            {
+                "id": "citie-28",
+                "name": "青海"
+            },
+            {
+                "id": "citie-29",
+                "name": "宁夏"
+            },
+            {
+                "id": "citie-30",
+                "name": "新疆"
+            },
+            {
+                "id": "citie-31",
+                "name": "港澳"
+            },
+            {
+                "id": "citie-32",
+                "name": "台湾"
+            },
+            {
+                "id": "citie-33",
+                "name": "钓鱼岛"
+            },
+            {
+                "id": "citie-34",
+                "name": "海外"
+            }
+        ],
+        "others": [
+            {
+                "id": "GS",
+                "name": "Global Site",
+                "icon": "global"
+            },
+            {
+                "id": "CP",
+                "name": "Сайт России",
+                "icon": "eluosi"
+            },
+            {
+                "id": "SI",
+                "name": "Situs Indonesia",
+                "icon": "yinni"
+            },
+            {
+                "id": "SdE",
+                "name": "Sitio de España",
+                "icon": "Spain"
+            },
+            {
+                "id": "TG",
+                "name": "เว็บไซต์ประเทศไทย",
+                "icon": "taiguo"
+            }
+        ],
+        "myjd1": [
+            {
+                "id": "jd1-0",
+                "name": "待处理订单"
+            },
+            {
+                "id": "jd1-1",
+                "name": "消息"
+            },
+            {
+                "id": "jd1-2",
+                "name": "返修退换货"
+            },
+            {
+                "id": "jd1-3",
+                "name": "我的问答"
+            },
+            {
+                "id": "jd1-4",
+                "name": "降价商品"
+            },
+            {
+                "id": "jd1-5",
+                "name": "我的关注"
+            }
+        ],
+        "myjd2": [
+            {
+                "id": "jd2-6",
+                "name": "我的京豆"
+            },
+            {
+                "id": "jd2-7",
+                "name": "我的优惠券"
+            },
+            {
+                "id": "jd2-8",
+                "name": "我的白条"
+            },
+            {
+                "id": "jd2-9",
+                "name": "我的理财"
+            }
+        ],
+        "purchase": [
+            {
+                "id": "qyg",
+                "name": "企业购"
+            },
+            {
+                "id": "sycjg",
+                "name": "商用场景馆"
+            },
+            {
+                "id": "gyp",
+                "name": "工业品"
+            },
+            {
+                "id": "lpk",
+                "name": "礼品卡"
+            }
+        ],
+        "cService": {
+            "customer": {
+                "title": "客户",
+                "detail": [
+                    {
+                        "id": "bzzx",
+                        "name": "帮助中心"
+                    },
+                    {
+                        "id": "shfw",
+                        "name": "售后服务"
+                    },
+                    {
+                        "id": "zxkf",
+                        "name": "在线客服"
+                    },
+                    {
+                        "id": "yjjy",
+                        "name": "意见建议"
+                    },
+                    {
+                        "id": "dhkf",
+                        "name": "电话客服"
+                    },
+                    {
+                        "id": "kfyx",
+                        "name": "客服邮箱"
+                    },
+                    {
+                        "id": "jrzx",
+                        "name": "金融咨询"
+                    },
+                    {
+                        "id": "qqskf",
+                        "name": "全球售客服"
+                    }
+                ]
+            },
+            "Merchant": {
+                "title": "商户",
+                "detail": [
+                    {
+                        "id": "hezs",
+                        "name": "合作招商"
+                    },
+                    {
+                        "id": "czzx",
+                        "name": "成长中心"
+                    },
+                    {
+                        "id": "help",
+                        "name": "商家后台"
+                    },
+                    {
+                        "id": "jmgzt",
+                        "name": "京麦工作台"
+                    },
+                    {
+                        "id": "sjbz",
+                        "name": "商家帮助"
+                    },
+                    {
+                        "id": "gzpt",
+                        "name": "规则平台"
+                    }
+                ]
+            }
+        },
+        "navigation": {
+            "theme": {
+                "title": "特色主题",
+                "detail": [
+                    {
+                        "id": "xpsf",
+                        "name": "新品首发"
+                    },
+                    {
+                        "id": "jdjr",
+                        "name": "京东金融"
+                    },
+                    {
+                        "id": "qqs",
+                        "name": "全球售"
+                    },
+                    {
+                        "id": "gjz",
+                        "name": "国际站"
+                    },
+                    {
+                        "id": "jdhy",
+                        "name": "京东会员"
+                    },
+                    {
+                        "id": "jdys",
+                        "name": "京东预售"
+                    },
+                    {
+                        "id": "msm",
+                        "name": "买什么"
+                    },
+                    {
+                        "id": "eyz",
+                        "name": "俄语站"
+                    },
+                    {
+                        "id": "zjds",
+                        "name": "装机大师"
+                    },
+                    {
+                        "id": "0ypc",
+                        "name": "0元评测"
+                    },
+                    {
+                        "id": "gas",
+                        "name": "港澳售"
+                    },
+                    {
+                        "id": "yhq",
+                        "name": "优惠券"
+                    },
+                    {
+                        "id": "ms",
+                        "name": "秒杀"
+                    },
+                    {
+                        "id": "sg",
+                        "name": "闪购"
+                    },
+                    {
+                        "id": "ynz",
+                        "name": "印尼站"
+                    },
+                    {
+                        "id": "jdjrkj",
+                        "name": "京东金融科技"
+                    },
+                    {
+                        "id": "pbjh",
+                        "name": "陪伴计划"
+                    },
+                    {
+                        "id": "chzs",
+                        "name": "出海招商"
+                    },
+                    {
+                        "id": "ppes",
+                        "name": "拍拍二手"
+                    }
+                ]
+            },
+            "channel": {
+                "title": "行业频道",
+                "detail": [
+                    {
+                        "id": "sj",
+                        "name": "手机"
+                    },
+                    {
+                        "id": "znsm",
+                        "name": "智能数码"
+                    },
+                    {
+                        "id": "w3C",
+                        "name": "玩3C"
+                    },
+                    {
+                        "id": "dnbg",
+                        "name": "电脑办公"
+                    },
+                    {
+                        "id": "jydq",
+                        "name": "家用电器"
+                    },
+                    {
+                        "id": "jyzzn",
+                        "name": "京鱼座智能"
+                    },
+                    {
+                        "id": "fzc",
+                        "name": "服装城"
+                    },
+                    {
+                        "id": "jdsx",
+                        "name": "京东生鲜"
+                    },
+                    {
+                        "id": "jzc",
+                        "name": "家装城"
+                    },
+                    {
+                        "id": "my",
+                        "name": "母婴"
+                    },
+                    {
+                        "id": "sp",
+                        "name": "食品"
+                    },
+                    {
+                        "id": "nzpd",
+                        "name": "农资频道"
+                    },
+                    {
+                        "id": "zc",
+                        "name": "整车"
+                    },
+                    {
+                        "id": "ts",
+                        "name": "图书"
+                    },
+                    {
+                        "id": "ldfh",
+                        "name": "劳动防护"
+                    }
+                ]
+            },
+            "lifeService": {
+                "title": "生活服务",
+                "detail": [
+                    {
+                        "id": "jdzc",
+                        "name": "京东众筹"
+                    },
+                    {
+                        "id": "bt",
+                        "name": "白条"
+                    },
+                    {
+                        "id": "jdjrApp",
+                        "name": "京东金融App"
+                    },
+                    {
+                        "id": "jdxjk",
+                        "name": "京东小金库"
+                    },
+                    {
+                        "id": "lc",
+                        "name": "理财"
+                    },
+                    {
+                        "id": "hf",
+                        "name": "话费"
+                    },
+                    {
+                        "id": "sdm",
+                        "name": "水电煤"
+                    },
+                    {
+                        "id": "cp",
+                        "name": "彩票"
+                    },
+                    {
+                        "id": "lx",
+                        "name": "旅行"
+                    },
+                    {
+                        "id": "jpjd",
+                        "name": "机票酒店"
+                    },
+                    {
+                        "id": "dyp",
+                        "name": "电影票"
+                    },
+                    {
+                        "id": "jddj",
+                        "name": "京东到家"
+                    },
+                    {
+                        "id": "yx",
+                        "name": "游戏"
+                    },
+                    {
+                        "id": "pphs",
+                        "name": "拍拍回收"
+                    }
+                ]
+            },
+            "more": {
+                "title": "更多精彩",
+                "detail": [
+                    {
+                        "id": "hzzs",
+                        "name": "合作招商"
+                    },
+                    {
+                        "id": "jdtx",
+                        "name": "京东通信"
+                    },
+                    {
+                        "id": "jdEk",
+                        "name": "京东E卡"
+                    },
+                    {
+                        "id": "qycg",
+                        "name": "企业采购"
+                    },
+                    {
+                        "id": "fwsc",
+                        "name": "服务市场"
+                    },
+                    {
+                        "id": "bgshg",
+                        "name": "办公生活馆"
+                    },
+                    {
+                        "id": "xczm",
+                        "name": "乡村招募"
+                    },
+                    {
+                        "id": "xyjm",
+                        "name": "校园加盟"
+                    },
+                    {
+                        "id": "jdsq",
+                        "name": "京东社区"
+                    },
+                    {
+                        "id": "yxsq",
+                        "name": "游戏社区"
+                    },
+                    {
+                        "id": "zscqwq",
+                        "name": "知识产权维权"
+                    }
+                ]
+            }
+        }
+    }
+}

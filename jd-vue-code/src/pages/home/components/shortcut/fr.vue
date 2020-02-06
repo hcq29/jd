@@ -71,8 +71,7 @@
       </div>
     </li>
     <li class="spacer"></li>
-    <li @mouseenter="jdPhone = !jdPhone"
-      @mouseleave="jdPhone = !jdPhone">
+    <li @mouseenter="jdPhone = !jdPhone" @mouseleave="jdPhone = !jdPhone">
       <a href="#" class="default">手机京东</a>
       <div v-show="jdPhone" id="J_mobile_pop" class="mobile_pop">
         <div class="mobile_pop_item">
@@ -101,7 +100,7 @@
                 </svg>
               </a>
             </div>
-            <div style="font-size: 8px;">android  iphone    phone</div>
+            <div style="font-size: 8px;">android iphone phone</div>
           </div>
         </div>
         <div class="mobile_pop_item">
@@ -134,9 +133,12 @@
                 </svg>
               </a>
             </div>
-            <div style="font-size: 8px;"> &nbsp; &nbsp;android &nbsp; &nbsp; iphone</div>
+            <div style="font-size: 8px;">&nbsp; &nbsp;android &nbsp; &nbsp; iphone</div>
           </div>
         </div>
+      </div>
+      <div class="vrcode">
+        <img src="../../../../assets/images/ew1.jpg" />
       </div>
     </li>
   </ul>
@@ -305,12 +307,27 @@ export default {
             justify-content: space-around;
             width: 77px;
           }
-          .mobile_pop_tit{
+
+          .mobile_pop_tit {
             font-weight: 800;
             color: #777;
           }
-          .mobile_pop_value{
+
+          .mobile_pop_value {
             color: $bgColor;
+          }
+        }
+
+        .vrcode {
+          position: absolute;
+          z-index: 3;
+          width: 1.3rem;
+          height: 1.3rem;
+          padding: 0.16rem;
+
+          img {
+            width: 1.3rem;
+            height: 1.3rem;
           }
         }
       }
@@ -328,6 +345,29 @@ export default {
       line-height: 0;
       font-size: 0;
       border: 5px solid transparent;
+      border-bottom-color: #fff;
+    }
+
+    .vrcode {
+      position: absolute;
+      padding: 0.15rem;
+      z-index: 2;
+      margin-left: -0.24rem;
+      box-shadow: 0 0.04rem 0.16rem rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    .vrcode:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      border: 0.1rem solid transparent;
+      left: 0.44rem;
+      top: -0.22rem;
       border-bottom-color: #fff;
     }
   }
