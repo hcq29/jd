@@ -93,7 +93,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "HomeHeader",
   data(){
     return {
       dropdown_Cart: false,
@@ -111,8 +111,7 @@ export default {
 
   .width {
     height: 2.8rem;
-    min-width: 19.8rem;
-    max-width: 19.8rem;
+    width: 19.8rem;
     background: $white;
     position: relative;
     z-index: 1;

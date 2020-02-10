@@ -23,3 +23,5 @@
 ![06-手机京东](images/06-%E6%89%8B%E6%9C%BA%E4%BA%AC%E4%B8%9C.jpg)
 
 ![07-头部](images/07-%E5%A4%B4%E9%83%A8.jpg)
+
+![08-轮播图](images/08-%E8%BD%AE%E6%92%AD%E5%9B%BE.png)
