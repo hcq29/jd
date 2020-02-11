@@ -24,9 +24,9 @@ export default {
   methods:{
     handleScroll () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      if(scrollTop > 760){
+      if(scrollTop > 755){
         this.$refs.sticky.style.position = 'fixed';
-        this.$refs.sticky.style.top = '2rem';
+        this.$refs.sticky.style.top = '1.6rem';
       }else{
         this.$refs.sticky.style.position = 'initial'
         this.$refs.sticky.style.top = '0rem';

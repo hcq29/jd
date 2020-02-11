@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="banner_center float">
-        <swiper :options="swiperOption" ref="mySwiper">
+        <swiper :options="swiperOption" ref="mySwiper" v-if="list.swiperList.length">
           <!-- slides -->
           <swiper-slide v-for="(slide, index) in list.swiperList" :key="index">
             <img :src="slide.imgUrl" />

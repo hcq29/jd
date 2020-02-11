@@ -7,12 +7,9 @@
         </router-link>
       </div>
       <div class="search" ref="search">
-        <div class="search_m">
-
-        </div>
         <div class="top_input">
           <div v-show="small_logo" class="small_logo"></div>
-          <div class="search_input">
+          <div class="search_input" ref="input">
             <input type="text" placeholder="海飞丝洗发水" />
             <button class="search_btn">
               <i class="iconfont icon-search"></i>
@@ -22,6 +19,7 @@
             class="dropdown"
             @mouseenter="dropdown_Cart = !dropdown_Cart"
             @mouseleave="dropdown_Cart = !dropdown_Cart"
+            ref="cart"
           >
             <div class="my_SCartNumber">
               <i class="iconfont icon-cart"></i>
@@ -115,12 +113,16 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      if (scrollTop > 760) {
+      if (scrollTop > 755) {
         this.$refs.search.className = 'search search-fix'
+        this.$refs.input.style.left = '7.2rem'
+        this.$refs.cart.style.left = '17.3rem'
         this.small_logo = true;
       } else {
         this.small_logo = false;
         this.$refs.search.className = 'search'
+        this.$refs.input.style.left = '4.6rem'
+        this.$refs.cart.style.left = '14.7rem'
       }
     }
   },
@@ -167,15 +169,15 @@ export default {
         position: absolute;
 
         .small_logo {
+          position: absolute;
+          top: 0.5rem;
+          left: 2.7rem;
+          width: 3rem;
+          height: 0.8rem;
           background-image: url('../../../assets/images/sprite.png');
           background-repeat: no-repeat;
           background-size: 190px 160px;
-          width: 3rem;
-          height: 3rem;
           background-position: 0 -120px;
-          position: absolute;
-          top: 0.5rem;
-          left: -3.5rem;
         }
 
         .search_input {
@@ -183,7 +185,7 @@ export default {
           height: 0.7rem;
           position: absolute;
           top: 0.56rem;
-          left: 4.75rem;
+          left: 4.6rem;
           border: 0.04rem solid #e1251b;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -216,7 +218,7 @@ export default {
           height: 0.7rem;
           position: absolute;
           top: 0.56rem;
-          left: 14.8rem;
+          left: 14.7rem;
           border: 0.01rem solid #eee;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -282,7 +284,25 @@ export default {
     }
 
     .search-fix{
-      position fixed
+      position: fixed;
+      left: 0;
+      width: 100%;
+      top: -0.38rem;
+      height: 1.4rem;
+      background: $white;
+      border-bottom: .04rem solid #f10214;
+      background-color: #fff;
+      box-shadow: .04rem .04rem .04rem rgba(0,0,0,.2);
+      animation: searchTop .5s ease-out;
+    }
+
+    @keyframes searchTop {
+      from{
+        top: -1.8rem;
+      }
+      to{
+        top: -0.38rem;
+      }
     }
 
     .hotwords {
