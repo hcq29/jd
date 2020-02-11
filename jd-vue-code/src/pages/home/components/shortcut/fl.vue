@@ -62,7 +62,7 @@
 
 <script>
 export default {
-  name: "Fl",
+  name: "ShortcutFl",
   props: {
     list: Array | Object
   },

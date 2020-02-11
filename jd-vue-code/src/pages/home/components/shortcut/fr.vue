@@ -146,7 +146,7 @@
 
 <script>
 export default {
-  name: "Fr",
+  name: "ShortcutFr",
   props: {
     list: Array | Object
   },
@@ -222,7 +222,6 @@ export default {
       width: 3rem;
       z-index: 3;
       padding: 0.25rem;
-      top: 0.62rem;
       text-align: left;
       margin-left: -2.02rem;
 

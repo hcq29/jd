@@ -2,7 +2,9 @@
   <div id="home">
     <home-shortcut :list="shortcutList"></home-shortcut>
     <home-header></home-header>
-    <home-banner></home-banner>
+    <home-banner :list="shortcutList"></home-banner>
+    <home-seckill></home-seckill>
+    <home-jcore1></home-jcore1>
   </div>
 </template>
 
@@ -10,13 +12,17 @@
 import HomeShortcut from "./components/shortcut/Shortcut";
 import HomeHeader from './components/Header';
 import HomeBanner from './components/Banner';
+import HomeSeckill from './components/Seckill';
+import HomeJcore1 from './components/Jcore1';
 import axios from "axios";
 export default {
   name: "Home",
   components: {
     HomeShortcut,
     HomeHeader,
-    HomeBanner
+    HomeBanner,
+    HomeSeckill,
+    HomeJcore1
   },
   data() {
     return {

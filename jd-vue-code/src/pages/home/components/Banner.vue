@@ -23,16 +23,27 @@
           <li>工业品</li>
         </ul>
       </div>
-      <div class="banner_center float"></div>
+      <div class="banner_center float">
+        <swiper :options="swiperOption" ref="mySwiper">
+          <!-- slides -->
+          <swiper-slide v-for="(slide, index) in list.swiperList" :key="index">
+            <img :src="slide.imgUrl" />
+          </swiper-slide>
+          <!-- Optional controls -->
+          <div class="swiper-pagination" slot="pagination"></div>
+          <div class="swiper-button-prev" slot="button-prev">＜</div>
+          <div class="swiper-button-next" slot="button-next">＞</div>
+        </swiper>
+      </div>
       <div class="banner_right float">
         <div class="login">
           <div class="login_top">
             <img class="head_img" src="../../../assets/images/head.png" />
             <div class="welcome">
-              <p>Hi~欢迎逛京东!</p>
+              <p class="redColor">Hi~欢迎逛京东!</p>
               <p>
-                <span>登录</span> |
-                <span>注册</span>
+                <span class="redColor">登录</span> |
+                <span class="redColor">注册</span>
               </p>
             </div>
           </div>
@@ -44,119 +55,23 @@
         <div class="express_news">
           <div class="news_title">
             <span>京东快报</span>
-            <span>更多 ></span>
+            <span class="redColor">更多 ></span>
           </div>
           <div class="news">
-            <div>
-              <span>热门</span>N95口罩今年你备了么？没有买到的N95口罩的这里看看
-            </div>
-            <div>
-              <span>HOT</span>一家独霸中国口罩市场，美国3M口罩为何能总能被畅销？
-            </div>
-            <div>
-              <span>最新</span>还在为买不到口罩发愁吗？国家发声了！
-            </div>
-            <div>
-              <span>推荐</span>小米10配置出炉！5G+6400像素+超级快充
+            <div v-for="(news, index) in list.news" :key="index">
+              <a href="#">{{news.title}}</a>
+              <a href="#" class="redColor">{{news.detail}}</a>
             </div>
           </div>
         </div>
         <div class="items">
-          <div class="item">
+          <div class="item" v-for="(item , index) in list.items" :key="index">
             <i>
               <svg class="icon i_icon" aria-hidden="true">
-                <use xlink:href="#icon-huafei" />
+                <use :xlink:href="item.icon" />
               </svg>
             </i>
-            <span>话费</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-feiji" />
-              </svg>
-            </i>
-            <span>机票</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jiudian" />
-              </svg>
-            </i>
-            <span>酒店</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-youxi" />
-              </svg>
-            </i>
-            <span>游戏</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jiayouka" />
-              </svg>
-            </i>
-            <span>加油卡</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-huochepiao" />
-              </svg>
-            </i>
-            <span>火车票</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-zhongchou" />
-              </svg>
-            </i>
-            <span>众筹</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-licai" />
-              </svg>
-            </i>
-            <span>理财</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-baitiao" />
-              </svg>
-            </i>
-            <span>白条</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-dianyingpiao" />
-              </svg>
-            </i>
-            <span>电影票</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-qiyegou" />
-              </svg>
-            </i>
-            <span>企业购</span>
-          </div>
-          <div class="item">
-            <i>
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-lipinka" />
-              </svg>
-            </i>
-            <span>礼品卡</span>
+            <span class="redColor">{{item.title}}</span>
           </div>
         </div>
       </div>
@@ -166,12 +81,58 @@
 
 <script>
 export default {
-  name: "Banner"
+  name: "Banner",
+  props: {
+    list: Array | Object
+  },
+  data() {
+    return {
+      swiperOption: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        effect: "fade",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      }
+    };
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper;
+    }
+  }
 };
 </script>
 
 <style scoped lang='stylus'>
 @import '~styles/varibles.styl';
+
+#banner >>> .swiper-pagination-bullet {
+  width: 0.16rem;
+  height: 0.16rem;
+  margin-right: 0.08rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#banner >>> .swiper-pagination-bullet-active {
+  width: 0.14rem;
+  height: 0.14rem;
+  top: 0.04rem;
+  left: 0;
+  border: 0.06rem solid rgba(0, 0, 0, 0.3);
+}
 
 #banner {
   height: 9.6rem;
@@ -209,6 +170,7 @@ export default {
           padding-left: 0.32rem;
           cursor: pointer;
           box-sizing: border-box;
+          transition: 0.2s;
         }
 
         li:hover {
@@ -221,7 +183,48 @@ export default {
       width: 11.8rem;
       height: 9.6rem;
       margin-right: 0.2rem;
-      background-color: pink;
+      background-color: #eee !important;
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+
+        img {
+          width: 11.8rem;
+          height: 9.6rem;
+        }
+      }
+
+      .swiper-pagination {
+        text-align: left;
+        margin-left: 1rem;
+      }
+
+      .swiper-button-prev, .swiper-button-next {
+        width: 0.5rem;
+        height: 0.8rem;
+        background-color: rgba(0, 0, 0, 0.15);
+        background-image: none;
+        transition: 0.5s;
+        color: #fff;
+        text-align: center;
+        line-height: 0.8rem;
+        font-weight: 800;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        border-radius: 0 0.4rem 0.4rem 0;
+      }
+
+      .swiper-button-next {
+        right: 0;
+        border-radius: 0.4rem 0 0 0.4rem;
+      }
     }
 
     .banner_right {
@@ -247,10 +250,16 @@ export default {
             border-radius: 0.44rem;
             border: 0.04rem solid $white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
           }
 
           .welcome {
             margin-left: 1.1rem;
+            cursor: pointer;
+
+            .redColor:hover {
+              color: $bgColor;
+            }
           }
         }
 
@@ -264,6 +273,7 @@ export default {
             height: 0.5rem;
             border-radius: 0.26rem;
             transition: 0.5s;
+            cursor: pointer;
           }
 
           .new_btn {
@@ -298,7 +308,7 @@ export default {
       }
 
       .express_news:after {
-        top: 4.4rem;
+        top: 4.5rem;
       }
 
       .express_news {
@@ -313,13 +323,20 @@ export default {
             font-size: 0.28rem;
           }
 
-          :nth-child(2) {
+          .redColor {
             color: $gray;
             float: right;
+            cursor: pointer;
+          }
+
+          .redColor:hover {
+            color: $bgColor;
           }
         }
 
         .news {
+          margin-top: 0.2rem;
+
           div {
             width: 100%;
             overflow: hidden;
@@ -328,6 +345,7 @@ export default {
             text-overflow: ellipsis;
             margin-top: 0.1rem;
             color: $gray6;
+            cursor: pointer;
 
             :nth-child(1) {
               color: $bgColor;
@@ -337,6 +355,10 @@ export default {
               margin-right: 0.2rem;
             }
           }
+        }
+
+        .news span:hover {
+          color: $bgColor;
         }
       }
 
@@ -358,7 +380,7 @@ export default {
           i .icon {
             width: 0.5rem;
             height: 0.5rem;
-            font-weight 600
+            font-weight: 600;
           }
         }
       }

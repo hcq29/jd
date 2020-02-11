@@ -1,9 +1,14 @@
 <template>
-  <div id="shortcut">
-    <div class="content">
-      <!-- 城市选择 -->
-      <shortcut-fl :list="list"></shortcut-fl>
-      <shortcut-fr :list="list"></shortcut-fr>
+  <div>
+    
+    <shortcut-ad></shortcut-ad>
+    <div id="shortcut">
+      <div class="content">
+        <!-- 城市选择 -->
+        <shortcut-fl :list="list"></shortcut-fl>
+        <!-- items -->
+        <shortcut-fr :list="list"></shortcut-fr>
+      </div>
     </div>
   </div>
 </template>
@@ -11,6 +16,7 @@
 <script>
 import ShortcutFl from "./fl";
 import ShortcutFr from "./fr";
+import ShortcutAd from "./ad";
 export default {
   name: "HomeShortcut",
   props: {
@@ -18,7 +24,8 @@ export default {
   },
   components: {
     ShortcutFl,
-    ShortcutFr
+    ShortcutFr,
+    ShortcutAd
   },
   data() {
     return {
@@ -57,7 +64,6 @@ export default {
   position: absolute;
   border-left: .02rem solid #ccc;
   border-right: .02rem solid #ccc;
-  top: 0.62rem;
   background-color: $white;
   -webkit-box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);
   box-shadow: .02rem .04rem .02rem rgba(0, 0, 0, .1);
