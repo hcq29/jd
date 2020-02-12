@@ -558,40 +558,6 @@
                 ]
             }
         },
-        "swiperList": [
-            {
-                "id": "0001",
-                "imgUrl": "https://img14.360buyimg.com/pop/s1180x940_jfs/t1/84874/14/12053/84692/5e420dd5E6d9279e7/780b8e5c03961c41.jpg.webp"
-            },
-            {
-                "id": "0002",
-                "imgUrl": "https://img30.360buyimg.com/da/s1180x940_jfs/t1/86016/22/11877/101176/5e3e6972E6a9c27a6/78a6b0df5e0da29a.jpg.webp"
-            },
-            {
-                "id": "0003",
-                "imgUrl": "https://img11.360buyimg.com/pop/s1180x940_jfs/t1/103290/8/11783/95402/5e3bdef7E72cae863/c49929461c22cdc3.jpg.webp"
-            },
-            {
-                "id": "0004",
-                "imgUrl": "https://imgcps.jd.com/ling/100004404532/6L-b5Y-j5q-N5am05riF5rSB/5a6I5oqkYmFieeWkp-S9nOaImA/p-5bd8253082acdd181d02f9ee/38ec3d08.jpg"
-            },
-            {
-                "id": "0005",
-                "imgUrl": "https://img11.360buyimg.com/pop/s1180x940_jfs/t1/95174/9/12105/53112/5e416604E5b65b45e/b883b8397b6dffd1.jpg.webp"
-            },
-            {
-                "id": "0006",
-                "imgUrl": "https://imgcps.jd.com/ling/100010640208/5omL5py66LSt5a6e5oOg/5aSH6LSn6LaF5YC8/p-5bd8253082acdd181d02f9e8/3601e1d9/590x470.jpg"
-            },
-            {
-                "id": "0007",
-                "imgUrl": "https://img11.360buyimg.com/babel/s1180x940_jfs/t1/100787/2/11541/102022/5e392b55E13981cda/c99d8268f5095d5e.jpg.webp"
-            },
-            {
-                "id": "0008",
-                "imgUrl": "https://img20.360buyimg.com/pop/s1180x940_jfs/t1/99700/26/11822/112420/5e41254dEd7545f6b/f71d65124f2cefc4.jpg.webp"
-            }
-        ],
         "news": [
             {
                 "id": "0001",
