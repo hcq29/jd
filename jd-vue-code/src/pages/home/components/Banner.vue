@@ -24,10 +24,10 @@
         </ul>
       </div>
       <div class="banner_center float">
-        <swiper :options="swiperOption" ref="mySwiper" v-if="list.swiperList">
+        <swiper :options="swiperOption" ref="mySwiper" v-if="list">
           <!-- slides -->
           <swiper-slide v-for="index in swiperList" :key="index">
-            <img v-if="index" :src="require('../../../assets/images/bannerImg' + index + '.jpg')" />
+            <img :src="require('../../../assets/images/bannerImg' + index + '.jpg')" />
           </swiper-slide>
           <!-- Optional controls -->
           <div class="swiper-pagination" slot="pagination"></div>
