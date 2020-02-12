@@ -3,12 +3,12 @@
     <div class="width">
       <div class="logo" id="logo">
         <router-link href="javascript:void(0);" to="/" class="img_logo">
-          <img class="img_logo" src="../../../assets/images/logo.gif" />
+          <img class="img_logo" :src="BLogoImg" />
         </router-link>
       </div>
       <div class="search" ref="search">
         <div class="top_input">
-          <div v-show="small_logo" class="small_logo"></div>
+          <div v-show="small_logo" class="small_logo" :style="logoImg"></div>
           <div class="search_input" ref="input">
             <input type="text" placeholder="海飞丝洗发水" />
             <button class="search_btn">
@@ -99,13 +99,19 @@
 </template>
 
 <script>
+import SLogoImg from 'images/sprite.png'
+import BLogoImg from 'images/logo.gif'
 export default {
   name: "HomeHeader",
   data() {
     return {
       dropdown_Cart: false,
-      small_logo: false
-    };
+      small_logo: false,
+      logoImg: {
+        backgroundImage: "url(" + SLogoImg + ")"
+      },
+      BLogoImg
+    }
   },
   methods: {
     handleScroll() {
@@ -174,7 +180,6 @@ export default {
           left: 2.7rem;
           width: 3rem;
           height: 0.8rem;
-          background-image: url('../../../assets/images/sprite.png');
           background-repeat: no-repeat;
           background-size: 190px 160px;
           background-position: 0 -120px;

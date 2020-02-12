@@ -1,23 +1,123 @@
 {
     "ret": true,
     "data": {
-        电视
-超薄电视全面屏电视智能电视OLED电视智慧屏4K超清电视55英寸65英寸电视配件
-空调
-空调挂机空调柜机中央空调变频空调一级能效移动空调以旧换新
-洗衣机
-滚筒洗衣机洗烘一体机波轮洗衣机迷你洗衣机烘干机洗衣机配件
-冰箱
-多门对开门三门双门冷柜/冰吧酒柜冰箱配件
-厨卫大电
-油烟机燃气灶烟灶套装集成灶消毒柜洗碗机电热水器燃气热水器空气能热水器太阳能热水器嵌入式厨电烟机灶具配件
-厨房小电
-破壁机电烤箱电饭煲电压力锅电炖锅豆浆机料理机咖啡机电饼铛榨汁机/原汁机电水壶/热水瓶微波炉电火锅养生壶电磁炉面包机空气炸锅面条机电陶炉煮蛋器电烧烤炉
-生活电器
-取暖电器加湿器空气净化器吸尘器除螨仪扫地机器人除湿机干衣机蒸汽拖把/拖地机挂烫机/熨斗电话机饮水机净水器电风扇冷风扇毛球修剪器生活电器配件
-个护健康
-剃须刀电动牙刷电吹风美容器洁面仪按摩器健康秤卷/直发器剃/脱毛器理发器足浴盆足疗机按摩椅
-视听影音
-
+        "swiperList": [
+            {
+                "id": "0001",
+                "imgUrl": "https://img14.360buyimg.com/pop/s1180x940_jfs/t1/84874/14/12053/84692/5e420dd5E6d9279e7/780b8e5c03961c41.jpg.webp"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "https://img30.360buyimg.com/da/s1180x940_jfs/t1/86016/22/11877/101176/5e3e6972E6a9c27a6/78a6b0df5e0da29a.jpg.webp"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "https://img11.360buyimg.com/pop/s1180x940_jfs/t1/103290/8/11783/95402/5e3bdef7E72cae863/c49929461c22cdc3.jpg.webp"
+            },
+            {
+                "id": "0004",
+                "imgUrl": "https://imgcps.jd.com/ling/100004404532/6L-b5Y-j5q-N5am05riF5rSB/5a6I5oqkYmFieeWkp-S9nOaImA/p-5bd8253082acdd181d02f9ee/38ec3d08.jpg"
+            },
+            {
+                "id": "0005",
+                "imgUrl": "https://img11.360buyimg.com/pop/s1180x940_jfs/t1/95174/9/12105/53112/5e416604E5b65b45e/b883b8397b6dffd1.jpg.webp"
+            },
+            {
+                "id": "0006",
+                "imgUrl": "https://img20.360buyimg.com/pop/s1180x940_jfs/t1/88188/22/12056/43424/5e412ccaEb2dbda62/e454c66fe117e806.jpg.webp"
+            },
+            {
+                "id": "0007",
+                "imgUrl": "https://img11.360buyimg.com/babel/s1180x940_jfs/t1/100787/2/11541/102022/5e392b55E13981cda/c99d8268f5095d5e.jpg.webp"
+            },
+            {
+                "id": "0008",
+                "imgUrl": "https://img20.360buyimg.com/pop/s1180x940_jfs/t1/99700/26/11822/112420/5e41254dEd7545f6b/f71d65124f2cefc4.jpg.webp"
+            }
+        ],
+        "news": [
+            {
+                "id": "0001",
+                "title": "热门",
+                "detail": "N95口罩今年你备了么？没有买到的N95口罩的这里看看"
+            },
+            {
+                "id": "0002",
+                "title": "HOT",
+                "detail": "一家独霸中国口罩市场，美国3M口罩为何能总能被畅销？"
+            },
+            {
+                "id": "0003",
+                "title": "最新",
+                "detail": "还在为买不到口罩发愁吗？国家发声了！"
+            },
+            {
+                "id": "0004",
+                "title": "推荐",
+                "detail": "小米10配置出炉！5G+6400像素+超级快充"
+            }
+        ],
+        "items": [
+            {
+                "id": "0001",
+                "title": "话费",
+                "icon": "#icon-huafei"
+            },
+            {
+                "id": "0002",
+                "title": "机票",
+                "icon": "#icon-feiji"
+            },
+            {
+                "id": "0003",
+                "title": "酒店",
+                "icon": "#icon-jiudian"
+            },
+            {
+                "id": "0004",
+                "title": "游戏",
+                "icon": "#icon-youxi"
+            },
+            {
+                "id": "0005",
+                "title": "加油卡",
+                "icon": "#icon-jiayouka"
+            },
+            {
+                "id": "0006",
+                "title": "火车票",
+                "icon": "#icon-huochepiao"
+            },
+            {
+                "id": "0007",
+                "title": "众筹",
+                "icon": "#icon-zhongchou"
+            },
+            {
+                "id": "0008",
+                "title": "理财",
+                "icon": "#icon-licai"
+            },
+            {
+                "id": "0009",
+                "title": "白条",
+                "icon": "#icon-baitiao"
+            },
+            {
+                "id": "00010",
+                "title": "电影票",
+                "icon": "#icon-dianyingpiao"
+            },
+            {
+                "id": "00011",
+                "title": "企业购",
+                "icon": "#icon-qiyegou"
+            },
+            {
+                "id": "00012",
+                "title": "礼品卡",
+                "icon": "#icon-lipinka"
+            }
+        ]
     }
 }
