@@ -28,7 +28,7 @@ export default {
         this.$refs.sticky.style.position = 'fixed';
         this.$refs.sticky.style.top = '1.6rem';
       }else{
-        this.$refs.sticky.style.position = 'initial'
+        this.$refs.sticky.style.position = 'static'
         this.$refs.sticky.style.top = '0rem';
       }
     },

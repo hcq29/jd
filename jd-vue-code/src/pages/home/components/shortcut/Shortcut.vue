@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <shortcut-ad></shortcut-ad>
     <div id="shortcut">
       <div class="content">

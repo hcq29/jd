@@ -27,10 +27,8 @@
               <i class="ci-count">0</i>
             </div>
             <div class="my_SCartshow" v-if="dropdown_Cart">
-              <div>
-                <i class="iconfont icon-cart nocart"></i>
-              </div>
-              <div>购物车中还没有商品，赶紧选购吧！</div>
+              <i class="iconfont icon-cart nocart"></i>
+              <span>购物车中还没有商品，赶紧选购吧！</span>
             </div>
           </div>
         </div>
@@ -272,12 +270,8 @@ export default {
             background: #fff;
             border: 1px solid $bgColor;
 
-            div {
-              display: inline-block;
-
-              .nocart {
-                font-size: 0.7rem;
-              }
+            .nocart {
+              font-size: 0.7rem;
             }
           }
         }

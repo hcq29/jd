@@ -17,6 +17,7 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(ElementUI)
 Vue.use(VueAwesomeSwiper);
+require('es6-promise').polyfill()
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

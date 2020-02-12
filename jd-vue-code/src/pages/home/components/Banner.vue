@@ -26,8 +26,8 @@
       <div class="banner_center float">
         <swiper :options="swiperOption" ref="mySwiper" v-if="list.swiperList">
           <!-- slides -->
-          <swiper-slide v-for="(slide, index) in list.swiperList" :key="index">
-            <img :src="slide.imgUrl" />
+          <swiper-slide v-for="index in swiperList" :key="index">
+            <img v-if="index" :src="require('../../../assets/images/bannerImg' + index + '.jpg')" />
           </swiper-slide>
           <!-- Optional controls -->
           <div class="swiper-pagination" slot="pagination"></div>
@@ -104,7 +104,8 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         }
-      }
+      },
+      swiperList: [0,1,2,3,4,5,6,7]
     };
   },
   computed: {
@@ -122,16 +123,12 @@ export default {
   width: 0.16rem;
   height: 0.16rem;
   margin-right: 0.08rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 0.02rem solid rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.9);
 }
 
 #banner >>> .swiper-pagination-bullet-active {
-  width: 0.14rem;
-  height: 0.14rem;
-  top: 0.04rem;
-  left: 0;
-  border: 0.06rem solid rgba(0, 0, 0, 0.3);
+  border: 0.06rem solid rgba(0, 0, 0, 0.1);
 }
 
 #banner {

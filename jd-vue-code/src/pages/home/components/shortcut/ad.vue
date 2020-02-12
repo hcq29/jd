@@ -1,23 +1,20 @@
 <template>
   <div v-show="show" class="shortcutad">
     <div class="width">
-      <img
-        src="https://img10.360buyimg.com/babel/jfs/t1/93397/8/11673/135678/5e38ea64E000df9e1/d0595b5f09d9de76.jpg!cc_990x80!q70.jpg.webp"
-      />
+      <img :src="adImg"/>
       <span class="close" @click="close">X</span>
     </div>
   </div>
 </template>
 
 <script>
+import adImg from 'images/ad.jpg'
 export default {
   name: "ShortcutAd",
-  props: {
-    list: Array | Object
-  },
   data() {
     return {
-      show: true
+      show: true,
+      adImg
     };
   },
   methods: {
@@ -50,6 +47,7 @@ export default {
     .close {
       position: absolute;
       right: 0.2rem;
+      top: .04rem;
       font-size: 0.28rem;
       cursor: pointer;
       font-weight: 700;
