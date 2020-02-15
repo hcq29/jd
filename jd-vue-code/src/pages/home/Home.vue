@@ -1,10 +1,11 @@
 <template>
   <div id="home">
-    <home-shortcut :list="shortcutList"></home-shortcut>
+    <home-shortcut :list="list"></home-shortcut>
     <home-header></home-header>
-    <home-banner :list="shortcutList"></home-banner>
-    <home-seckill></home-seckill>
-    <home-jcore1></home-jcore1>
+    <home-banner :list="list.banner"></home-banner>
+    <home-seckill :list="list.seckill"></home-seckill>
+    <home-jcoreone></home-jcoreone>
+    <home-jcoretwo></home-jcoretwo>
   </div>
 </template>
 
@@ -13,7 +14,8 @@ import HomeShortcut from "./components/shortcut/Shortcut";
 import HomeHeader from './components/Header';
 import HomeBanner from './components/Banner';
 import HomeSeckill from './components/Seckill';
-import HomeJcore1 from './components/Jcore1';
+import HomeJcoreone from './components/Jcoreone';
+import HomeJcoretwo from './components/Jcoretwo';
 import axios from "axios";
 export default {
   name: "Home",
@@ -22,11 +24,12 @@ export default {
     HomeHeader,
     HomeBanner,
     HomeSeckill,
-    HomeJcore1
+    HomeJcoreone,
+    HomeJcoretwo
   },
   data() {
     return {
-      shortcutList: []
+      list: []
     };
   },
   mounted() {
@@ -46,8 +49,8 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        this.shortcutList = data
-        console.log(this.shortcutList)
+        this.list = data
+        console.log(this.list)
       }
     }
   }

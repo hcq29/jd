@@ -2,7 +2,7 @@
   <div id="header">
     <div class="width">
       <div class="logo" id="logo">
-        <router-link href="javascript:void(0);" to="/" class="img_logo">
+        <router-link href="#" to="/" class="img_logo">
           <img class="img_logo" :src="BLogoImg" />
         </router-link>
       </div>
@@ -228,6 +228,7 @@ export default {
           border: 1px solid #eee;
           color: $bgColor;
           background-color: $white;
+          overflow hidden
 
           .my_SCartNumber {
             height: 0.7rem;
@@ -269,6 +270,7 @@ export default {
             text-align: center;
             background: #fff;
             border: 1px solid $bgColor;
+            overflow hidden
 
             .nocart {
               font-size: 0.7rem;
@@ -310,6 +312,7 @@ export default {
       height: 0.4rem;
       line-height: 0.4rem;
       top: 1.4rem;
+      overflow: hidden;
 
       .hot_lu {
         list-style: none;
@@ -340,6 +343,7 @@ export default {
       margin-top: 0.88rem;
       font-size: 0.3rem;
       line-height: 0.4rem;
+      overflow: hidden;
 
       .hot_lu {
         list-style: none;

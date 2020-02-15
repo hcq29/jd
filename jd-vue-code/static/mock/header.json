@@ -558,89 +558,228 @@
                 ]
             }
         },
-        "news": [
-            {
-                "id": "0001",
-                "title": "热门",
-                "detail": "N95口罩今年你备了么？没有买到的N95口罩的这里看看"
-            },
-            {
-                "id": "0002",
-                "title": "HOT",
-                "detail": "一家独霸中国口罩市场，美国3M口罩为何能总能被畅销？"
-            },
-            {
-                "id": "0003",
-                "title": "最新",
-                "detail": "还在为买不到口罩发愁吗？国家发声了！"
-            },
-            {
-                "id": "0004",
-                "title": "推荐",
-                "detail": "小米10配置出炉！5G+6400像素+超级快充"
-            }
-        ],
-        "items": [
-            {
-                "id": "0001",
-                "title": "话费",
-                "icon": "#icon-huafei"
-            },
-            {
-                "id": "0002",
-                "title": "机票",
-                "icon": "#icon-feiji"
-            },
-            {
-                "id": "0003",
-                "title": "酒店",
-                "icon": "#icon-jiudian"
-            },
-            {
-                "id": "0004",
-                "title": "游戏",
-                "icon": "#icon-youxi"
-            },
-            {
-                "id": "0005",
-                "title": "加油卡",
-                "icon": "#icon-jiayouka"
-            },
-            {
-                "id": "0006",
-                "title": "火车票",
-                "icon": "#icon-huochepiao"
-            },
-            {
-                "id": "0007",
-                "title": "众筹",
-                "icon": "#icon-zhongchou"
-            },
-            {
-                "id": "0008",
-                "title": "理财",
-                "icon": "#icon-licai"
-            },
-            {
-                "id": "0009",
-                "title": "白条",
-                "icon": "#icon-baitiao"
-            },
-            {
-                "id": "00010",
-                "title": "电影票",
-                "icon": "#icon-dianyingpiao"
-            },
-            {
-                "id": "00011",
-                "title": "企业购",
-                "icon": "#icon-qiyegou"
-            },
-            {
-                "id": "00012",
-                "title": "礼品卡",
-                "icon": "#icon-lipinka"
-            }
-        ]
+        "banner": {
+            "news": [
+                {
+                    "id": "0001",
+                    "title": "热门",
+                    "detail": "N95口罩今年你备了么？没有买到的N95口罩的这里看看"
+                },
+                {
+                    "id": "0002",
+                    "title": "HOT",
+                    "detail": "一家独霸中国口罩市场，美国3M口罩为何能总能被畅销？"
+                },
+                {
+                    "id": "0003",
+                    "title": "最新",
+                    "detail": "还在为买不到口罩发愁吗？国家发声了！"
+                },
+                {
+                    "id": "0004",
+                    "title": "推荐",
+                    "detail": "小米10配置出炉！5G+6400像素+超级快充"
+                }
+            ],
+            "banner": [
+                {
+                    "id": "1",
+                    "img": "../../../assets/images/SeckillImg/1.jpg"
+                },
+                {
+                    "id": "2",
+                    "img": "../../../assets/images/SeckillImg/2.jpg"
+                },
+                {
+                    "id": "3",
+                    "img": "../../../assets/images/SeckillImg/3.jpg"
+                },
+                {
+                    "id": "4",
+                    "img": "../../../assets/images/SeckillImg/4.jpg"
+                },
+                {
+                    "id": "5",
+                    "img": "../../../assets/images/SeckillImg/5.jpg"
+                },
+                {
+                    "id": "6",
+                    "img": "../../../assets/images/SeckillImg/6.jpg"
+                },
+                {
+                    "id": "7",
+                    "img": "../../../assets/images/SeckillImg/7.jpg"
+                },
+                {
+                    "id": "8",
+                    "img": "../../../assets/images/SeckillImg/8.jpg"
+                }
+            ],
+            "items": [
+                {
+                    "id": "0001",
+                    "title": "话费",
+                    "icon": "icon-huafei",
+                    "color": "#5AAAE5"
+                },
+                {
+                    "id": "0002",
+                    "title": "机票",
+                    "icon": "icon-feiji",
+                    "color": "#F2A233"
+                },
+                {
+                    "id": "0003",
+                    "title": "酒店",
+                    "icon": "icon-jiudian",
+                    "color": "#3DD6C6"
+                },
+                {
+                    "id": "0004",
+                    "title": "游戏",
+                    "icon": "icon-youxi",
+                    "color": "#F2A233"
+                },
+                {
+                    "id": "0005",
+                    "title": "加油卡",
+                    "icon": "icon-jiayouka",
+                    "color": "#3DD6C6"
+                },
+                {
+                    "id": "0006",
+                    "title": "火车票",
+                    "icon": "icon-huochepiao",
+                    "color": "#EB675E"
+                },
+                {
+                    "id": "0007",
+                    "title": "众筹",
+                    "icon": "icon-zhongchou",
+                    "color": "#3DD6C6"
+                },
+                {
+                    "id": "0008",
+                    "title": "理财",
+                    "icon": "icon-licai",
+                    "color": "#5AAAE5"
+                },
+                {
+                    "id": "0009",
+                    "title": "白条",
+                    "icon": "icon-baitiao",
+                    "color": "#EB675E"
+                },
+                {
+                    "id": "00010",
+                    "title": "电影票",
+                    "icon": "icon-dianyingpiao",
+                    "color": "#EB675E"
+                },
+                {
+                    "id": "00011",
+                    "title": "企业购",
+                    "icon": "icon-qiyegou",
+                    "color": "#5AAAE5"
+                },
+                {
+                    "id": "00012",
+                    "title": "礼品卡",
+                    "icon": "icon-lipinka",
+                    "color": "#F2A233"
+                }
+            ]
+        },
+        "seckill": {
+            "time": "14:00",
+            "center": [
+                {
+                    "id": "1",
+                    "title": "VK 真无线Air蓝牙耳机双耳入耳式运动适用iPhone苹果XS/XRMax/X/11/8/7/6 【升级版2代】改名定位+入耳检测+修改名称操作 华强北1月新版洛达1536U",
+                    "price": "189.00",
+                    "price_origin": "289.00"
+                },
+                {
+                    "id": "2",
+                    "title": "【今日必抢 KTS联名定制】2020春季新品 3D飞织休闲鞋 时装走秀款舒适耐穿运动潮鞋厚底跑步鞋 白黄-经典款 41-标准运动鞋码",
+                    "price": "138.00",
+                    "price_origin": "459.99"
+                },
+                {
+                    "id": "3",
+                    "title": "【二手9成新】苹果XR 手机 Apple iPhone X xr  国行全网通 二手手机 双卡双待 中国红 64G 全网通",
+                    "price": "3265.00",
+                    "price_origin": "3599.00"
+                },
+                {
+                    "id": "4",
+                    "title": "全民饮茶喝护健康 金骏眉500克 精选红茶 福建春茶武夷山小种红茶 散茶散装2袋 创天下茶叶 自饮季",
+                    "price": "38.60",
+                    "price_origin": "100.00"
+                },
+                {
+                    "id": "5",
+                    "title": "京选丨致砖 拼插积木 50合1儿童启蒙积木玩具 3~12岁STEAM教育积木 兼容乐高（机械拼插积木）",
+                    "price": "68.90",
+                    "price_origin": "99.00"
+                },
+                {
+                    "id": "6",
+                    "title": "波斯丹顿双肩包男士商务休闲潮流帆布学生运动书包大容量旅行背包15.6英寸笔记本电脑包 男 B6174141深灰色",
+                    "price": "118.00",
+                    "price_origin": "149.00"
+                },
+                {
+                    "id": "7",
+                    "title": "简拓 2020夏季新款国潮男装黑色麒麟刺绣短袖T恤男 中国风学生青年纯棉印花半袖绣花情侣体恤 858黑色 XL码",
+                    "price": "97.00",
+                    "price_origin": "129.00"
+                },
+                {
+                    "id": "8",
+                    "title": "志高（CHIGO）饭菜保温板热菜板家用恒温暖菜宝加热桌垫多功能暖菜板60CM圆形ZG-B668",
+                    "price": "279.00",
+                    "price_origin": "308.00"
+                },
+                {
+                    "id": "9",
+                    "title": "璐瑶黑头吸出器吸黑头去黑头仪器神器毛孔清洁器粉刺油脂导出美容器洁面仪 白色豪华款双键",
+                    "price": "58.00",
+                    "price_origin": "108.00"
+                },
+                {
+                    "id": "10",
+                    "title": "宋玉坊和田玉十二生肖吊坠千手观音本命佛玉坠男女款守护神大日如来普贤菩萨菩萨玉佩挂件 阿弥陀佛生肖狗猪守护神",
+                    "price": "236.00",
+                    "price_origin": "658.00"
+                },
+                {
+                    "id": "11",
+                    "title": "车动力 汽车防撞贴 汽车防撞条车门防撞条汽车车门边防撞贴后视镜防撞贴 车型通用 卡通组合联盟 四片装",
+                    "price": "11.80",
+                    "price_origin": "19.90"
+                },
+                {
+                    "id": "12",
+                    "title": "75%酒精喷雾免洗消毒液抑菌洗手液家用便携 3瓶 80ml（现货）",
+                    "price": "39.90",
+                    "price_origin": "65.00"
+                }
+            ],
+            "right": [
+                {
+                    "id": "1",
+                    "title1": "全球购美妆特卖",
+                    "title2": "低至3件5折",
+                    "btn": "品类秒杀"
+                },
+                {
+                    "id": "2",
+                    "title1": "沃尔玛秒杀",
+                    "title2": "低至299减80",
+                    "btn": "大牌抢购"
+                }
+            ]
+        }
     }
 }

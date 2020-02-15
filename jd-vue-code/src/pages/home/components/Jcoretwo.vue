@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'HomeJcore1'
+    name: 'HomeJcoretwo'
 }
 </script>
 

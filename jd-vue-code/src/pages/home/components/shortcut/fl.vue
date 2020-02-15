@@ -1,58 +1,54 @@
 <template>
   <ul class="fl">
     <li @mouseenter="show = !show" @mouseleave="show = !show" class="shortcut_btn">
-      <router-link tag="div" href="javascript:void(0);" class="location" :to="'/'">
+      <a href="#" class="location">
         <i class="iconfont icon-location"></i>
         <span>{{current_city}}</span>
-      </router-link>
+      </a>
       <div v-show="show" class="areamini">
         <div class="items">
           <div v-for="item in list.cities" :key="item.id" class="item">
-            <router-link
-              tag="a"
+            <a
               :data-id="item.id"
-              href="javascript:void(0);"
+              href="#"
               class="city_cur"
-              :to="'/'"
+            
               v-if="item.name == current_city"
-            >{{item.name}}</router-link>
-            <router-link
-              tag="a"
+            >{{item.name}}</a>
+            <a
               :data-id="item.id"
-              href="javascript:void(0);"
+              href="#"
               class="to_city"
-              :to="'/'"
+            
               v-else
-            >{{item.name}}</router-link>
+            >{{item.name}}</a>
           </div>
         </div>
         <div class="areamini_inter">
           <div class="areamini_inter_split"></div>
           <p class="desc">地区专享版本</p>
-          <router-link
-            tag="a"
+          <a
             data-id="ga"
-            href="javascript:void(0);"
+            href="#"
             class="other_items"
-            :to="'/'"
-          >中國港澳</router-link>
+          
+          >中國港澳</a>
         </div>
         <div class="areamini_inter">
           <div class="areamini_inter_split"></div>
           <p class="areamini_inter_desc">Available Sites</p>
           <div class="other_item" v-for="other in list.others" :key="other.id">
-            <router-link
-              tag="a"
+            <a
               :data-id="other.id"
-              href="javascript:void(0);"
+              href="#"
               class="other_items"
-              :to="'/'"
+            
             >
               <svg class="icon" aria-hidden="true">
                 <use :xlink:href="'#icon-' + other.icon" />
               </svg>
               {{other.name}}
-            </router-link>
+            </a>
           </div>
         </div>
       </div>
@@ -102,7 +98,7 @@ export default {
 
     .areamini {
       width: 6.44rem;
-      height: 9rem;
+      height: auto;
 
       .items {
         width: 6.1rem;

@@ -24,10 +24,10 @@
         </ul>
       </div>
       <div class="banner_center float">
-        <swiper :options="swiperOption" ref="mySwiper" v-if="list">
+        <swiper :options="swiperOption" ref="mySwiper" v-if="swiperList">
           <!-- slides -->
           <swiper-slide v-for="index in swiperList" :key="index">
-            <img :src="require('../../../assets/images/bannerImg' + index + '.jpg')" />
+            <img :src="require('../../../assets/images/banner1/bannerImg' + index + '.jpg')" />
           </swiper-slide>
           <!-- Optional controls -->
           <div class="swiper-pagination" slot="pagination"></div>
@@ -40,39 +40,39 @@
           <div class="login_top">
             <img class="head_img" src="../../../assets/images/head.png" />
             <div class="welcome">
-              <p class="redColor">Hi~欢迎逛京东!</p>
+              <a href="#" class="redColor">Hi~欢迎逛京东!</a>
               <p>
-                <span class="redColor">登录</span> |
-                <span class="redColor">注册</span>
+                <a href="#" class="redColor">登录</a> |
+                <a href="#" class="redColor">注册</a>
               </p>
             </div>
           </div>
           <div class="login_btn">
-            <button class="new_btn">新人福利</button>
-            <button class="plus_btn">PLUS会员</button>
+            <button class="new_btn">
+              <a href="#">新人福利</a>
+            </button>
+            <button class="plus_btn">
+              <a href="#">PLUS会员</a>
+            </button>
           </div>
         </div>
         <div class="express_news">
           <div class="news_title">
             <span>京东快报</span>
-            <span class="redColor">更多 ></span>
+            <a class="redColor" href="#">更多 ></a>
           </div>
-          <div class="news">
-            <div v-for="(news, index) in list.news" :key="index">
-              <a href="#">{{news.title}}</a>
-              <a href="#" class="redColor">{{news.detail}}</a>
+          <div class="news" v-if="list">
+            <div v-for="(mynews, index) in list.news" :key="index">
+              <a href="#">{{mynews.title}}</a>
+              <a href="#">{{mynews.detail}}</a>
             </div>
           </div>
         </div>
-        <div class="items">
-          <div class="item" v-for="(item , index) in list.items" :key="index">
-            <i>
-              <svg class="icon i_icon" aria-hidden="true">
-                <use :xlink:href="item.icon" />
-              </svg>
-            </i>
+        <div class="items" v-if="list">
+          <a href="#" class="item" v-for="(item , index) in list.items" :key="index">
+            <i :class="'iconfont ' + item.icon" v-if="item" :style="'color: ' + item.color"></i>
             <span class="redColor">{{item.title}}</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
 export default {
   name: "Banner",
   props: {
-    list: Array | Object
+    list: Object
   },
   data() {
     return {
@@ -105,7 +105,7 @@ export default {
           prevEl: ".swiper-button-prev"
         }
       },
-      swiperList: [0,1,2,3,4,5,6,7]
+      swiperList: [0, 1, 2, 3, 4, 5, 6, 7]
     };
   },
   computed: {
@@ -274,8 +274,11 @@ export default {
           }
 
           .new_btn {
-            color: $white;
             background-color: $bgColor;
+
+            a {
+              color: $white;
+            }
           }
 
           .new_btn:hover {
@@ -283,13 +286,19 @@ export default {
           }
 
           .plus_btn {
-            color: #e5d790;
             background-color: #363634;
+
+            a {
+              color: #e5d790;
+            }
           }
 
           .plus_btn:hover {
-            color: $white;
             background-color: #c81623;
+
+            a {
+              color: $white;
+            }
           }
         }
       }
@@ -341,7 +350,6 @@ export default {
             word-wrap: inherit;
             text-overflow: ellipsis;
             margin-top: 0.1rem;
-            color: $gray6;
             cursor: pointer;
 
             :nth-child(1) {
@@ -350,6 +358,13 @@ export default {
               padding: 0.04rem 0.06rem;
               background-color: rgba(225, 37, 27, 0.08);
               margin-right: 0.2rem;
+            }
+            :nth-child(2) {
+              color: $gray6;
+            }
+
+            a:hover {
+              color: $bgColor;
             }
           }
         }
@@ -373,12 +388,18 @@ export default {
           flex-direction: column;
           text-align: center;
           line-height: 0.35rem;
+          color $gray6;
 
-          i .icon {
-            width: 0.5rem;
+          .iconfont {
+            width: 100%;
             height: 0.5rem;
             font-weight: 600;
+            font-size: 0.5rem;
           }
+        }
+
+        .item:hover {
+          color: $bgColor !important;
         }
       }
     }
