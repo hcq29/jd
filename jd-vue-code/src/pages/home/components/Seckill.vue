@@ -51,18 +51,22 @@
       </swiper>
     </div>
     <div :class="sticky" ref="sticky">
-      <ul>
-        <li>京东秒杀</li>
-        <li>特色优选</li>
-        <li>频道广场</li>
-        <li>为你推荐</li>
+      <ul ref="stickyItems" class="sticky_items">
+        <li ref="miaosha">京东秒杀</li>
+        <li ref="tese">特色优选</li>
+        <li ref="pindao">频道广场</li>
+        <li ref="tuijian">为你推荐</li>
         <li>
-          <i></i>
+          <i class="iconfont icon-kefu"></i>
           客服
-          </li>
+        </li>
         <li>
-          <i></i>
+          <i class="iconfont icon-w_shuxie"></i>
           反馈
+        </li>
+        <li class="back">
+          <i class="iconfont icon-down"></i>
+          返回
         </li>
       </ul>
     </div>
@@ -116,12 +120,27 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
+      var stickyStyle = this.$refs.sticky.style;
+      var stickyItemsStyle = this.$refs.stickyItems.style;
       if (scrollTop > 755) {
-        this.$refs.sticky.style.position = "fixed";
-        this.$refs.sticky.style.top = "1.6rem";
+        if(stickyStyle.position != "fixed"){
+          stickyStyle.position = "fixed";
+          stickyStyle.top = "1.6rem";
+          stickyStyle.height = "9.3rem";
+          stickyItemsStyle.overflow = "initial";
+        }
       } else {
-        this.$refs.sticky.style.position = "static";
-        this.$refs.sticky.style.top = "0rem";
+        if(stickyItemsStyle.overflow != "hidden"){
+          stickyStyle.position = "static";
+          stickyStyle.top = "0rem";
+          stickyStyle.height = "7.92rem";
+          stickyItemsStyle.overflow = "hidden";
+        }
+      }
+      if(scrollTop > 755 && scrollTop < 950){
+        this.$refs.miaosha.style.color = "#E1251B"
+      }else{
+        this.$refs.miaosha.style.color = "#333"
       }
     }
   },
@@ -137,13 +156,14 @@ export default {
 .width >>> .swiper-container {
   height: 100%;
 }
+
 .width >>> .swiper-pagination-bullet {
   width: 0.08rem;
   height: 0.08rem;
 }
 
 .width >>> .swiper-pagination-bullet-active {
-  background-color $bgColor
+  background-color: $bgColor;
 }
 
 .width {
@@ -337,7 +357,7 @@ export default {
     height: 100%;
     position: relative;
     z-index: 0;
-    background: linear-gradient(180deg, transparent, rgba(255,255,255,0.4), rgba(220,224,236,0.4));
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4), rgba(220, 224, 236, 0.4));
 
     .right_img {
       width: 2.6rem;
@@ -349,6 +369,7 @@ export default {
       img {
         width: 2.6rem;
       }
+
       img:hover {
         opacity: 0.8;
       }
@@ -356,9 +377,9 @@ export default {
 
     .title {
       text-align: center;
-      height: .86rem;
+      height: 0.86rem;
       line-height: 0.4rem;
-      margin-top: .2rem;
+      margin-top: 0.2rem;
 
       h6 {
         font-size: 0.25rem;
@@ -384,22 +405,51 @@ export default {
       margin-left: 50%;
       position: relative;
       left: -0.8rem;
-      transition .3s
+      transition: 0.3s;
     }
-    .btn:hover{
-      border transparent
-      background-color #c81623
-      color $white
+
+    .btn:hover {
+      border: transparent;
+      background-color: $darkbgColor;
+      color: $white;
     }
   }
 
   .sticky {
     width: 1.2rem;
-    height: 7rem;
-    background-color: #453;
+    height: 7.92rem;
+    background-color: $white;
     margin-left: 20.26rem;
     top: 0;
     transition: 0.5s;
+
+    .sticky_items {
+      text-align: center;
+      color: $darkTextColor;
+      overflow hidden
+      height: 7.92rem;
+
+      .back{
+        color $bgColor  
+      }
+      li {
+        display: block;
+        width: 0.6rem;
+        line-height: 0.35rem;
+        font-size: 0.3rem;
+        padding: 0.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+        i {
+          font-size: 0.45rem;
+        }
+      }
+
+      li:hover {
+        background-color: $darkbgColor;
+        color: $white;
+      }
+    }
   }
 }
 </style>

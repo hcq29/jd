@@ -282,7 +282,7 @@ export default {
           }
 
           .new_btn:hover {
-            background-color: #c81623;
+            background-color: $darkbgColor;
           }
 
           .plus_btn {
@@ -294,7 +294,7 @@ export default {
           }
 
           .plus_btn:hover {
-            background-color: #c81623;
+            background-color: $darkbgColor;
 
             a {
               color: $white;

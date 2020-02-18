@@ -212,7 +212,7 @@ export default {
           }
 
           .search_btn:hover {
-            background-color: #c81623;
+            background-color: $darkbgColor;
           }
         }
 
