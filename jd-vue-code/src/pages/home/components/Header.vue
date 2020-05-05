@@ -125,8 +125,8 @@ export default {
       } else {
         this.small_logo = false;
         this.$refs.search.className = 'search'
-        this.$refs.input.style.left = '4.6rem'
-        this.$refs.cart.style.left = '14.7rem'
+        this.$refs.input.style.left = '5.6rem'
+        this.$refs.cart.style.left = '15.7rem'
       }
     }
   },
@@ -145,7 +145,7 @@ export default {
 
   .width {
     height: 2.8rem;
-    width: 19.8rem;
+    width: $maxWidth;
     background: $white;
     position: relative;
     z-index: 1;
@@ -168,7 +168,7 @@ export default {
       height: 2.8rem;
 
       .top_input {
-        width: 19.8rem;
+        width: $maxWidth;
         height: 1.4rem;
         position: absolute;
 
@@ -188,7 +188,7 @@ export default {
           height: 0.7rem;
           position: absolute;
           top: 0.56rem;
-          left: 4.6rem;
+          left: 5.6rem;
           border: 0.04rem solid #e1251b;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -221,14 +221,13 @@ export default {
           height: 0.7rem;
           position: absolute;
           top: 0.56rem;
-          left: 14.7rem;
+          left: 15.7rem;
           border: 0.01rem solid #eee;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           border: 1px solid #eee;
           color: $bgColor;
           background-color: $white;
-          overflow hidden
 
           .my_SCartNumber {
             height: 0.7rem;
@@ -308,7 +307,7 @@ export default {
 
     .hotwords {
       position: absolute;
-      left: 4.54rem;
+      left: 5.54rem;
       height: 0.4rem;
       line-height: 0.4rem;
       top: 1.4rem;

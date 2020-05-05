@@ -53,7 +53,7 @@ export default {
 
 #shortcut >>>  li.spacer {
   overflow: hidden;
-  margin: .22rem .08rem 0;
+  width: .02rem;
   height: .2rem;
   background-color: #ccc;
   padding: 0;
@@ -76,7 +76,7 @@ export default {
   background: $borderColor;
 
   .content {
-    width: 19.8rem;
+    width: $maxWidth;
     margin: auto;
     height: 100%;
     background: $borderColor;

@@ -34,7 +34,7 @@ export default {
 
   .width {
     height: 1.6rem;
-    width: 19.8rem;
+    width: $maxWidth;
     background: $white;
     position: relative;
     z-index: 1;
@@ -42,6 +42,7 @@ export default {
 
     img {
       height: 1.6rem;
+      width: 100%;
     }
 
     .close {

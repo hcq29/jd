@@ -52,10 +52,10 @@
     </div>
     <div :class="sticky" ref="sticky">
       <ul ref="stickyItems" class="sticky_items">
-        <li ref="miaosha">京东秒杀</li>
-        <li ref="tese">特色优选</li>
-        <li ref="pindao">频道广场</li>
-        <li ref="tuijian">为你推荐</li>
+        <li ref="miaosha" @click="miaosha">京东秒杀</li>
+        <li ref="tese" @click="tese">特色优选</li>
+        <li ref="pindao" @click="pindao">频道广场</li>
+        <li ref="tuijian" @click="tuijian">为你推荐</li>
         <li>
           <i class="iconfont icon-kefu"></i>
           客服
@@ -64,7 +64,7 @@
           <i class="iconfont icon-w_shuxie"></i>
           反馈
         </li>
-        <li class="back">
+        <li class="back" @click="back">
           <i class="iconfont icon-down"></i>
           返回
         </li>
@@ -86,8 +86,8 @@ export default {
   data() {
     return {
       swiperOption1: {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 4,
+        spaceBetween: 15,
         slidesPerGroup: 3,
         loop: true,
         navigation: {
@@ -122,26 +122,55 @@ export default {
         document.body.scrollTop;
       var stickyStyle = this.$refs.sticky.style;
       var stickyItemsStyle = this.$refs.stickyItems.style;
+
       if (scrollTop > 755) {
-        if(stickyStyle.position != "fixed"){
-          stickyStyle.position = "fixed";
-          stickyStyle.top = "1.6rem";
-          stickyStyle.height = "9.3rem";
+        if (stickyStyle.position != "fixed") {
+          stickyStyle.cssText = "position: fixed; top: 1.6rem; height: 9.3rem;";
           stickyItemsStyle.overflow = "initial";
         }
       } else {
-        if(stickyItemsStyle.overflow != "hidden"){
-          stickyStyle.position = "static";
-          stickyStyle.top = "0rem";
-          stickyStyle.height = "7.92rem";
+        if (stickyItemsStyle.overflow != "hidden") {
+          stickyStyle.cssText = "position: static; top: 0rem; height: 7.92rem;";
           stickyItemsStyle.overflow = "hidden";
         }
       }
-      if(scrollTop > 755 && scrollTop < 950){
-        this.$refs.miaosha.style.color = "#E1251B"
-      }else{
-        this.$refs.miaosha.style.color = "#333"
+
+      var miaosha = this.$refs.miaosha;
+      var tese = this.$refs.tese;
+      var pindao = this.$refs.pindao;
+      var tuijian = this.$refs.tuijian;
+      if (scrollTop > 710 && scrollTop < 940) {
+        miaosha.className = 'redColor'
+        tese.className = ''
+        pindao.className = ''
+        tuijian.className = ''
+      } else if(scrollTop >= 940 && scrollTop < 1500){
+       miaosha.className = ''
+       tese.className = 'redColor'
+       pindao.className = ''
+       tuijian.className = ''
+      }else if(scrollTop >= 1500 && scrollTop < 1600){
+        miaosha.className = ''
+        tese.className = ''
+        pindao.className = 'redColor'
+        tuijian.className = ''
       }
+
+    },
+    miaosha(){
+      window.scrollTo(0,710);
+    },
+    tese(){
+      window.scrollTo(0,940);
+    },
+    pindao(){
+      window.scrollTo(0,1500);
+    },
+    tuijian(){
+      window.scrollTo(0,710);
+    },
+    back(){
+      window.scrollTo(0,0);
     }
   },
   mounted() {
@@ -157,6 +186,11 @@ export default {
   height: 100%;
 }
 
+.width >>> .redColor{
+  background-color #c81623;
+  color: #fff;
+} 
+
 .width >>> .swiper-pagination-bullet {
   width: 0.08rem;
   height: 0.08rem;
@@ -167,7 +201,7 @@ export default {
 }
 
 .width {
-  width: 19.8rem;
+  width: $maxWidth;
   height: 5.2rem;
   margin: auto;
   background-color: $white;
@@ -177,7 +211,7 @@ export default {
   }
 
   .left {
-    width: 3.8rem;
+    width: 3.4rem;
     height: 100%;
     color: $white;
     background-color: $white;
@@ -240,7 +274,7 @@ export default {
   }
 
   .center {
-    width: 12.6rem;
+    width: 15rem;
     height: 5.2rem;
     background-color: $white;
     position: relative;
@@ -282,7 +316,7 @@ export default {
       }
 
       .price {
-        width: 3.2rem;
+        width: 2.8rem;
         height: 0.44rem;
         margin: auto;
         margin-top: 0.12rem;
@@ -290,7 +324,7 @@ export default {
         background: $bgColor;
 
         .price_miaosha {
-          width: 1.8rem;
+          width: 1.6rem;
           height: 0.44rem;
           line-height: 0.48rem;
           display: inline-block;
@@ -308,11 +342,11 @@ export default {
           border-style: solid;
           border-width: 22px 8px 0 0;
           position: absolute;
-          left: 98px;
+          left: 1.81rem;
         }
 
         .price_origin {
-          width: 1.38rem;
+          width: 1.2rem;
           height: 0.44rem;
           line-height: 0.44rem;
           float: right;
@@ -419,19 +453,25 @@ export default {
     width: 1.2rem;
     height: 7.92rem;
     background-color: $white;
-    margin-left: 20.26rem;
+    margin-left: 22.1rem;
     top: 0;
     transition: 0.5s;
 
     .sticky_items {
       text-align: center;
       color: $darkTextColor;
-      overflow hidden
+      overflow: hidden;
       height: 7.92rem;
 
-      .back{
-        color $bgColor  
+      .back {
+        color: $bgColor;
+
+        .icon-down {
+          transform: rotate(180deg);
+          display: inline-block;
+        }
       }
+
       li {
         display: block;
         width: 0.6rem;
@@ -440,6 +480,7 @@ export default {
         padding: 0.3rem;
         cursor: pointer;
         transition: 0.3s;
+
         i {
           font-size: 0.45rem;
         }

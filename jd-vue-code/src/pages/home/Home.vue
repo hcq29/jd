@@ -4,8 +4,9 @@
     <home-header></home-header>
     <home-banner :list="list.banner"></home-banner>
     <home-seckill :list="list.seckill"></home-seckill>
-    <home-jcoreone></home-jcoreone>
-    <home-jcoretwo></home-jcoretwo>
+    <home-jcoreone :list="list.special" :special2="list.special2"></home-jcoreone>
+    <home-jcoretwo :list="list.find"></home-jcoretwo>
+    <home-jcorethree :list="list.find"></home-jcorethree>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import HomeBanner from './components/Banner';
 import HomeSeckill from './components/Seckill';
 import HomeJcoreone from './components/Jcoreone';
 import HomeJcoretwo from './components/Jcoretwo';
+import HomeJcorethree from './components/Jcorethree';
 import axios from "axios";
 export default {
   name: "Home",
@@ -25,7 +27,8 @@ export default {
     HomeBanner,
     HomeSeckill,
     HomeJcoreone,
-    HomeJcoretwo
+    HomeJcoretwo,
+    HomeJcorethree
   },
   data() {
     return {

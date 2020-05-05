@@ -175,7 +175,7 @@ export default {
 
   li {
     display: inline-block;
-    padding: 0 7px;
+    padding: 0 0.26rem;
 
     .icon-down {
       font-size: 0.2rem;
@@ -246,7 +246,7 @@ export default {
       text-align: left;
       margin-left: -16.45rem;
       padding-bottom: 0.3rem;
-      width: 19.5rem;
+      width: 19.8rem;
       color: #777;
 
       dl {
@@ -297,14 +297,14 @@ export default {
         }
 
         .mobile_pop_info {
-          margin: 0 6px 0 90px;
-          min-height: 70px;
+          margin: 0 0.12rem 0 1.8rem;
+          min-height: 1.4rem;
           line-height: 0.38rem;
 
           .mobile_pop_device {
             display: flex;
             justify-content: space-around;
-            width: 77px;
+            width: 1.54rem;
           }
 
           .mobile_pop_tit {
@@ -366,7 +366,7 @@ export default {
       z-index: 2;
       border: 0.1rem solid transparent;
       left: 0.44rem;
-      top: -0.22rem;
+      top: -0.17rem;
       border-bottom-color: #fff;
     }
   }
