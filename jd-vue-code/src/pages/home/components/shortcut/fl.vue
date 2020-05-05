@@ -26,13 +26,13 @@
         <div class="areamini_inter">
           <div class="areamini_inter_split"></div>
           <p class="desc">地区专享版本</p>
-          <a data-id="ga" href="/" class="other_items">中國港澳</a>
+          <a data-id="ga" href="https://hcq29.github.io/jd/dist/" class="other_items">中國港澳</a>
         </div>
         <div class="areamini_inter">
           <div class="areamini_inter_split"></div>
           <p class="areamini_inter_desc">Available Sites</p>
           <div class="other_item" v-for="other in list.others" :key="other.id">
-            <a :data-id="other.id" href="/" class="other_items">
+            <a :data-id="other.id" href="https://hcq29.github.io/jd/dist/" class="other_items">
               <svg class="icon" aria-hidden="true">
                 <use :xlink:href="'#icon-' + other.icon" />
               </svg>
