@@ -62,7 +62,7 @@
           <img :src="require('../../../assets/images/special2/' + special2[0].id + '.jpg')" />
         </div>
         <div class="special_2">
-          <div v-for="item in special2" :key="item.id" class="low_cut" v-if="item.id > 1">
+          <div v-for="item in special2" :key="item.id" class="low_cut"  v-if="item.id > 1" >
             <div :data-id="item.id" class="low_list">
               <img :src="require('../../../assets/images/special2/' + item.id + '.jpg')" />
               <p class="title">{{item.title}}</p>
