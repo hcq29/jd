@@ -10,13 +10,13 @@
           <div v-for="item in list.cities" :key="item.id" class="item">
             <a
               :data-id="item.id"
-              href="/"
+              href="https://hcq29.github.io/jd/dist/"
               class="city_cur"
               v-if="item.name == current_city"
             >{{item.name}}</a>
             <a
               :data-id="item.id"
-              href="/"
+              href="https://hcq29.github.io/jd/dist/"
               class="to_city"
               v-else
               @click="changeCity(item.name)"
